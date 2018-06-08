@@ -11,7 +11,7 @@ import LoginPage from './components/LoginPage/LoginPage';
 import RegisterPage from './components/RegisterPage/RegisterPage';
 import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
-
+import MapPage from './components/MapPage/MapPage';
 import './styles/main.css';
 
 const App = () => (
@@ -35,6 +35,10 @@ const App = () => (
         <Route
           path="/info"
           component={InfoPage}
+        />
+         <Route
+          path="/map"
+          component={MapPage}
         />
         {/* OTHERWISE (no path!) */}
         <Route render={() => <h1>404</h1>} />

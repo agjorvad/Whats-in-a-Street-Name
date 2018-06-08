@@ -1,0 +1,2162 @@
+{
+    "objectIdFieldName": "OBJECTID",
+    "globalIdFieldName": "",
+    "geometryProperties": {
+       "shapeLengthFieldName": "Shape__Length",
+       "units": "esriDecimalDegrees"
+    },
+    "geometryType": "esriGeometryPolyline",
+    "spatialReference": {
+       "wkid": 4326,
+       "latestWkid": 4326
+    },
+    "fields": [
+       {
+          "name": "OBJECTID",
+          "type": "esriFieldTypeOID",
+          "alias": "OBJECTID",
+          "sqlType": "sqlTypeOther",
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "ALT_STREET_NAME2",
+          "type": "esriFieldTypeString",
+          "alias": "ALT_STREET_NAME2",
+          "sqlType": "sqlTypeOther",
+          "length": 30,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "ALT_STREET_NAME1",
+          "type": "esriFieldTypeString",
+          "alias": "ALT_STREET_NAME1",
+          "sqlType": "sqlTypeOther",
+          "length": 30,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "STREET_CLINE_REVD",
+          "type": "esriFieldTypeDate",
+          "alias": "STREET_CLINE_REVD",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "STREET_CLINE_CREATED",
+          "type": "esriFieldTypeDate",
+          "alias": "STREET_CLINE_CREATED",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "SOURCE_DATE",
+          "type": "esriFieldTypeDate",
+          "alias": "SOURCE_DATE",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "DIGITIZING_SOURCE",
+          "type": "esriFieldTypeString",
+          "alias": "DIGITIZING_SOURCE",
+          "sqlType": "sqlTypeOther",
+          "length": 32,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "TRAFFIC_DIR",
+          "type": "esriFieldTypeString",
+          "alias": "TRAFFIC_DIR",
+          "sqlType": "sqlTypeOther",
+          "length": 1,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "SPEED_LIM",
+          "type": "esriFieldTypeInteger",
+          "alias": "SPEED_LIM",
+          "sqlType": "sqlTypeOther",
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "FUNC_CLASS",
+          "type": "esriFieldTypeString",
+          "alias": "FUNC_CLASS",
+          "sqlType": "sqlTypeOther",
+          "length": 32,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "TRUCK_ROUTE_TYPE",
+          "type": "esriFieldTypeString",
+          "alias": "TRUCK_ROUTE_TYPE",
+          "sqlType": "sqlTypeOther",
+          "length": 32,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "BUS_ROUTE",
+          "type": "esriFieldTypeString",
+          "alias": "BUS_ROUTE",
+          "sqlType": "sqlTypeOther",
+          "length": 1,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "SNOW_EMERGENCY_ROUTE",
+          "type": "esriFieldTypeString",
+          "alias": "SNOW_EMERGENCY_ROUTE",
+          "sqlType": "sqlTypeOther",
+          "length": 1,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "POTHOLE_MAINTENANCE",
+          "type": "esriFieldTypeString",
+          "alias": "POTHOLE_MAINTENANCE",
+          "sqlType": "sqlTypeOther",
+          "length": 10,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "STREET_MAINT_DIST",
+          "type": "esriFieldTypeString",
+          "alias": "STREET_MAINT_DIST",
+          "sqlType": "sqlTypeOther",
+          "length": 4,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "BRIDGE",
+          "type": "esriFieldTypeString",
+          "alias": "BRIDGE",
+          "sqlType": "sqlTypeOther",
+          "length": 1,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "TURNBACK",
+          "type": "esriFieldTypeString",
+          "alias": "TURNBACK",
+          "sqlType": "sqlTypeOther",
+          "length": 4,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "SYSTEM_MILEAGE",
+          "type": "esriFieldTypeString",
+          "alias": "SYSTEM_MILEAGE",
+          "sqlType": "sqlTypeOther",
+          "length": 1,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "SEGMENT_LENGTH",
+          "type": "esriFieldTypeDouble",
+          "alias": "SEGMENT_LENGTH",
+          "sqlType": "sqlTypeOther",
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "JURISDICTION",
+          "type": "esriFieldTypeString",
+          "alias": "JURISDICTION",
+          "sqlType": "sqlTypeOther",
+          "length": 12,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "US_ROUTE_NO2",
+          "type": "esriFieldTypeString",
+          "alias": "US_ROUTE_NO2",
+          "sqlType": "sqlTypeOther",
+          "length": 4,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "US_ROUTE_NO1",
+          "type": "esriFieldTypeString",
+          "alias": "US_ROUTE_NO1",
+          "sqlType": "sqlTypeOther",
+          "length": 4,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "ROUTE_TYPE",
+          "type": "esriFieldTypeString",
+          "alias": "ROUTE_TYPE",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "ROUTE_NO",
+          "type": "esriFieldTypeString",
+          "alias": "ROUTE_NO",
+          "sqlType": "sqlTypeOther",
+          "length": 8,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "STREET_T_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "STREET_T_NAME",
+          "sqlType": "sqlTypeOther",
+          "length": 30,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "STREET_F_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "STREET_F_NAME",
+          "sqlType": "sqlTypeOther",
+          "length": 30,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "STREET_O_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "STREET_O_NAME",
+          "sqlType": "sqlTypeOther",
+          "length": 30,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "OFT",
+          "type": "esriFieldTypeString",
+          "alias": "OFT",
+          "sqlType": "sqlTypeOther",
+          "length": 12,
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "SYMBOL_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "SYMBOL_NAME",
+          "sqlType": "sqlTypeOther",
+          "length": 32,
+          "domain": {
+             "type": "codedValue",
+             "name": "SYMBOL_NAME_STREET_CLINE",
+             "codedValues": [
+                {
+                   "name": "RAMP_CNTY",
+                   "code": "RAMP_CNTY"
+                },
+                {
+                   "name": "RAMP_INTST",
+                   "code": "RAMP_INTST"
+                },
+                {
+                   "name": "RAMP_INTST_C",
+                   "code": "RAMP_INTST_C"
+                },
+                {
+                   "name": "RAMP_STATE",
+                   "code": "RAMP_STATE"
+                },
+                {
+                   "name": "RAMP_STATE_C",
+                   "code": "RAMP_STATE_C"
+                },
+                {
+                   "name": "ROAD_CNTY",
+                   "code": "ROAD_CNTY"
+                },
+                {
+                   "name": "ROAD_INTST",
+                   "code": "ROAD_INTST"
+                },
+                {
+                   "name": "ROAD_MIL",
+                   "code": "ROAD_MIL"
+                },
+                {
+                   "name": "ROAD_MUNI",
+                   "code": "ROAD_MUNI"
+                },
+                {
+                   "name": "ROAD_NONEX",
+                   "code": "ROAD_NONEX"
+                },
+                {
+                   "name": "ROAD_PKBD",
+                   "code": "ROAD_PKBD"
+                },
+                {
+                   "name": "ROAD_PRVT",
+                   "code": "ROAD_PRVT"
+                },
+                {
+                   "name": "ROAD_RWAY",
+                   "code": "ROAD_RWAY"
+                },
+                {
+                   "name": "ROAD_STATE",
+                   "code": "ROAD_STATE"
+                },
+                {
+                   "name": "ROAD_STATE_C",
+                   "code": "ROAD_STATE_C"
+                },
+                {
+                   "name": "ROAD_STATE_UNSIGNED",
+                   "code": "ROAD_STATE_UNSIGNED"
+                },
+                {
+                   "name": "ROAD_UMN",
+                   "code": "ROAD_UMN"
+                },
+                {
+                   "name": "ROAD_STATE_FR",
+                   "code": "ROAD_STATE_FR"
+                }
+             ]
+          },
+          "defaultValue": null
+       },
+       {
+          "name": "AADT_ID",
+          "type": "esriFieldTypeInteger",
+          "alias": "AADT_ID",
+          "sqlType": "sqlTypeOther",
+          "domain": null,
+          "defaultValue": null
+       },
+       {
+          "name": "Shape__Length",
+          "type": "esriFieldTypeDouble",
+          "alias": "Shape__Length",
+          "sqlType": "sqlTypeDouble",
+          "domain": null,
+          "defaultValue": null
+       }
+    ],
+    "features": [
+       {
+          "attributes": {
+             "OBJECTID": 1,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371148000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "N",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "33",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 655.094,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "RES",
+             "ROUTE_NO": "2947",
+             "STREET_T_NAME": "MORGAN AVE N",
+             "STREET_F_NAME": "OLIVER AVE N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002025072330",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.00253127117081027
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.3070569374587,
+                      44.9789429614141
+                   ],
+                   [
+                      -93.3045257814832,
+                      44.9789671102796
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 2,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371146000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "N",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "33",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 211.261,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "RES",
+             "ROUTE_NO": "2947",
+             "STREET_T_NAME": "GRAMERCY AVE N",
+             "STREET_F_NAME": "LOGAN AVE N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002022211713",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.00081619666229738
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.3032610301008,
+                      44.9789849486006
+                   ],
+                   [
+                      -93.3024449827982,
+                      44.9790005624209
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 3,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371141000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 67.33,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "412",
+             "STREET_T_NAME": "JAMES AVE N",
+             "STREET_F_NAME": "NORTH CEDAR LAKE RD",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002013122002",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 64,
+             "Shape__Length": 0.0002601745681066
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.3009558521815,
+                      44.9789995532557
+                   ],
+                   [
+                      -93.3006956776813,
+                      44.9789993651982
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 4,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371137000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 262.669,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "412",
+             "STREET_T_NAME": "GIRARD AVE N",
+             "STREET_F_NAME": "HUMBOLDT AVE N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002018221703",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.00101497256895915
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2981826510909,
+                      44.9789854384253
+                   ],
+                   [
+                      -93.2971677003893,
+                      44.9789787759119
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 5,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603272000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 682.98,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "190",
+             "STREET_T_NAME": "24TH ST E",
+             "STREET_F_NAME": "25TH ST E",
+             "STREET_O_NAME": "1ST AVE S",
+             "OFT": "001202540244",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 715,
+             "Shape__Length": 0.00187316539958451
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2765645942821,
+                      44.9573194844598
+                   ],
+                   [
+                      -93.2765511284012,
+                      44.9591926014567
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 6,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603269000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 459.749,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "190",
+             "STREET_T_NAME": "18TH ST E",
+             "STREET_F_NAME": "19TH ST E",
+             "STREET_O_NAME": "1ST AVE S",
+             "OFT": "001201940184",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1711,
+             "Shape__Length": 0.00126090692771964
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2765857755215,
+                      44.963953382226
+                   ],
+                   [
+                      -93.2765860843035,
+                      44.9652142891159
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 7,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603228000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 386.263,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "190",
+             "STREET_T_NAME": "17TH ST E",
+             "STREET_F_NAME": "18TH ST E",
+             "STREET_O_NAME": "1ST AVE S",
+             "OFT": "001201840174",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1711,
+             "Shape__Length": 0.00105958340635339
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2765860843035,
+                      44.9652142891159
+                   ],
+                   [
+                      -93.2765554201137,
+                      44.9662734287207
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 8,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1233660629000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 120.235,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "190",
+             "STREET_T_NAME": "15TH ST E",
+             "STREET_F_NAME": "16TH ST E",
+             "STREET_O_NAME": "1ST AVE S",
+             "OFT": "001201640154",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 717,
+             "Shape__Length": 0.000329857394478948
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2764609061621,
+                      44.9672202249279
+                   ],
+                   [
+                      -93.2764493663482,
+                      44.9675498804047
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 9,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603214000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 410.714,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "205",
+             "STREET_T_NAME": "2ND AVE N",
+             "STREET_F_NAME": "1ST AVE N",
+             "STREET_O_NAME": "1ST ST N",
+             "OFT": "001500100020",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1377,
+             "Shape__Length": 0.00137539040380633
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2678815582777,
+                      44.9845841546513
+                   ],
+                   [
+                      -93.269001780139,
+                      44.9853821532379
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 10,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1222248989000,
+             "STREET_CLINE_CREATED": 1122029494000,
+             "SOURCE_DATE": 1049760000000,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "N",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "5",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 541.857,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "RES",
+             "ROUTE_NO": "2772",
+             "STREET_T_NAME": "61ST ST W",
+             "STREET_F_NAME": "MN-62 FR RD N",
+             "STREET_O_NAME": "WASHBURN AVE S",
+             "OFT": "330648400619",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.0015014375079994
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.3174946201517,
+                      44.8911250198365
+                   ],
+                   [
+                      -93.3175050748951,
+                      44.8911258292103
+                   ],
+                   [
+                      -93.3175152048279,
+                      44.8911278375915
+                   ],
+                   [
+                      -93.3175247397002,
+                      44.8911309914
+                   ],
+                   [
+                      -93.3175334251376,
+                      44.8911352064973
+                   ],
+                   [
+                      -93.3175410294266,
+                      44.8911403704317
+                   ],
+                   [
+                      -93.3175473496971,
+                      44.8911463454379
+                   ],
+                   [
+                      -93.3175522173343,
+                      44.8911529721127
+                   ],
+                   [
+                      -93.3175555024771,
+                      44.8911600736671
+                   ],
+                   [
+                      -93.3175571174827,
+                      44.8911674606432
+                   ],
+                   [
+                      -93.3175570192645,
+                      44.8911749359686
+                   ],
+                   [
+                      -93.3175570283901,
+                      44.8911946535243
+                   ],
+                   [
+                      -93.3175575952498,
+                      44.8925868893143
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 11,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603214000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 393.595,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "205",
+             "STREET_T_NAME": "2ND AVE S",
+             "STREET_F_NAME": "MARQUETTE AVE",
+             "STREET_O_NAME": "1ST ST S",
+             "OFT": "001723120022",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 2098,
+             "Shape__Length": 0.0014184916813432
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2651393042493,
+                      44.9831302047983
+                   ],
+                   [
+                      -93.2638330575643,
+                      44.9825771783541
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 12,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371137000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 1048.346,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "412",
+             "STREET_T_NAME": "COLFAX AVE N",
+             "STREET_F_NAME": "FREMONT AVE N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002016171339",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.00405094082703751
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2955536956596,
+                      44.9789668025566
+                   ],
+                   [
+                      -93.2915027828596,
+                      44.978951733682
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 13,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371130000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 466.87,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "208",
+             "STREET_T_NAME": "6TH ST N",
+             "STREET_F_NAME": "7TH ST N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002000750065",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1419,
+             "Shape__Length": 0.00154475873897997
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2772111711477,
+                      44.9794477477663
+                   ],
+                   [
+                      -93.276763777432,
+                      44.9798953714086
+                   ],
+                   [
+                      -93.2759911299512,
+                      44.9803796768076
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 14,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371131000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 424.545,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "208",
+             "STREET_T_NAME": "4TH ST N",
+             "STREET_F_NAME": "5TH ST N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002000550045",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1420,
+             "Shape__Length": 0.00142199732903824
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2748179664015,
+                      44.9812166932177
+                   ],
+                   [
+                      -93.2736592336219,
+                      44.9820409594061
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 15,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1156230628000,
+             "STREET_CLINE_CREATED": 1156230580000,
+             "SOURCE_DATE": 1081900800000,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "1",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 532.126,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "203",
+             "STREET_T_NAME": "22ND AVE NE",
+             "STREET_F_NAME": "20TH AVE NE",
+             "STREET_O_NAME": "WASHINGTON ST NE",
+             "OFT": "331102010221",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 265,
+             "Shape__Length": 0.0014853493153514
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2569904126291,
+                      45.0085658482805
+                   ],
+                   [
+                      -93.2569883698423,
+                      45.0094950702633
+                   ],
+                   [
+                      -93.2569788620684,
+                      45.0095705232878
+                   ],
+                   [
+                      -93.2569619566606,
+                      45.0096453219177
+                   ],
+                   [
+                      -93.2569377359754,
+                      45.0097191016364
+                   ],
+                   [
+                      -93.25690631802,
+                      45.0097915028916
+                   ],
+                   [
+                      -93.256867855878,
+                      45.0098621728475
+                   ],
+                   [
+                      -93.2568225369636,
+                      45.009930767104
+                   ],
+                   [
+                      -93.2567705821089,
+                      45.0099969513755
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 16,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603264000,
+             "STREET_CLINE_CREATED": 1115731160000,
+             "SOURCE_DATE": 1049760000000,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "N",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "33",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 176.347,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "RES",
+             "ROUTE_NO": "2618",
+             "STREET_T_NAME": "BURNHAM BLVD",
+             "STREET_F_NAME": "BURNHAM BLVD",
+             "STREET_O_NAME": "WASHBURN AVE S",
+             "OFT": "330612301230",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.000505057747681853
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.3174975720473,
+                      44.9572900167993
+                   ],
+                   [
+                      -93.3175158091746,
+                      44.9573490872703
+                   ],
+                   [
+                      -93.31752449782,
+                      44.9574092448351
+                   ],
+                   [
+                      -93.3175235259413,
+                      44.9574697139543
+                   ],
+                   [
+                      -93.3175129060375,
+                      44.9575297150695
+                   ],
+                   [
+                      -93.3174927749891,
+                      44.9575884746533
+                   ],
+                   [
+                      -93.3174633922957,
+                      44.9576452351816
+                   ],
+                   [
+                      -93.317425136731,
+                      44.9576992649002
+                   ],
+                   [
+                      -93.3173785014615,
+                      44.9577498672577
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 17,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1322572145000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "N",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "5W",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 250.641,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "LOCAL",
+             "ROUTE_NO": "2AVS",
+             "STREET_T_NAME": "61ST ST E",
+             "STREET_F_NAME": "MN-62 FR RD N",
+             "STREET_O_NAME": "2ND AVE S",
+             "OFT": "002248400614",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.000689388773553268
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2743631671263,
+                      44.8917855908109
+                   ],
+                   [
+                      -93.2743957029912,
+                      44.89191551504
+                   ],
+                   [
+                      -93.2743985625344,
+                      44.8924709603195
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 18,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1144396934000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "N",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "1",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 414.446,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "RES",
+             "ROUTE_NO": "2642",
+             "STREET_T_NAME": "5TH ST SE",
+             "STREET_F_NAME": "4TH ST SE",
+             "STREET_O_NAME": "2ND AVE SE",
+             "OFT": "002300480058",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.00126291629531428
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2526674464167,
+                      44.9872180600293
+                   ],
+                   [
+                      -93.2518862022797,
+                      44.9882103377966
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 19,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603172000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 412.133,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "215",
+             "STREET_T_NAME": "2ND AVE N",
+             "STREET_F_NAME": "1ST AVE N",
+             "STREET_O_NAME": "2ND ST N",
+             "OFT": "002500100020",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1379,
+             "Shape__Length": 0.00138517681563484
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2690209033902,
+                      44.9837632994619
+                   ],
+                   [
+                      -93.2701574180912,
+                      44.9845551638094
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 20,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371125000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 342.725,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "215",
+             "STREET_T_NAME": "PLYMOUTH AVE N",
+             "STREET_F_NAME": "10TH AVE N",
+             "STREET_O_NAME": "2ND ST N",
+             "OFT": "002501002616",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 37,
+             "Shape__Length": 0.000987866270730373
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.279419753415,
+                      44.9911315393149
+                   ],
+                   [
+                      -93.279786485926,
+                      44.9918176330241
+                   ],
+                   [
+                      -93.279842516979,
+                      44.9920199257923
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 21,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1231930305000,
+             "STREET_CLINE_CREATED": 1219063616000,
+             "SOURCE_DATE": 1208131200000,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "A-MINOR RELIEVER",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "COUNTY",
+             "STREET_MAINT_DIST": "1",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 272.676,
+             "JURISDICTION": "COUNTY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "CSAH",
+             "ROUTE_NO": "36",
+             "STREET_T_NAME": "ONTARIO ST SE",
+             "STREET_F_NAME": "OAK ST SE",
+             "STREET_O_NAME": "UNIVERSITY AVE SE",
+             "OFT": "310425012512",
+             "SYMBOL_NAME": "ROAD_CNTY",
+             "AADT_ID": 369,
+             "Shape__Length": 0.000978069210771732
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2265633693914,
+                      44.9755117616862
+                   ],
+                   [
+                      -93.2262619355681,
+                      44.975361754555
+                   ],
+                   [
+                      -93.22566866671,
+                      44.9751180516627
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 22,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371125000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 396.182,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "215",
+             "STREET_T_NAME": "14TH AVE N",
+             "STREET_F_NAME": "PLYMOUTH AVE N",
+             "STREET_O_NAME": "2ND ST N",
+             "OFT": "002526160140",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 36,
+             "Shape__Length": 0.00108662655232022
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.279842516979,
+                      44.9920199257923
+                   ],
+                   [
+                      -93.2798593793029,
+                      44.9931064215015
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 23,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371125000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 396.495,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "215",
+             "STREET_T_NAME": "17TH AVE N",
+             "STREET_F_NAME": "16TH AVE N",
+             "STREET_O_NAME": "2ND ST N",
+             "OFT": "002501600170",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 36,
+             "Shape__Length": 0.00108755096744451
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2799058306918,
+                      44.9952819774553
+                   ],
+                   [
+                      -93.2799296710989,
+                      44.9963692670864
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 24,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1148371108000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 399.566,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "215",
+             "STREET_T_NAME": "18TH AVE N",
+             "STREET_F_NAME": "17TH AVE N",
+             "STREET_O_NAME": "2ND ST N",
+             "OFT": "002501700180",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 36,
+             "Shape__Length": 0.00109597786468542
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2799296710989,
+                      44.9963692670864
+                   ],
+                   [
+                      -93.27995413136,
+                      44.9974649719625
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 25,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1222252385000,
+             "STREET_CLINE_CREATED": 1122024558000,
+             "SOURCE_DATE": 1049760000000,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "N",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "5",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 1252.788,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "RES",
+             "ROUTE_NO": "2772",
+             "STREET_T_NAME": "PENN AVE S",
+             "STREET_F_NAME": "60TH ST W",
+             "STREET_O_NAME": "QUEEN AVE S",
+             "OFT": "270306092611",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.00381201389083799
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.3100092433789,
+                      44.8943401959769
+                   ],
+                   [
+                      -93.3100109179364,
+                      44.8947400592453
+                   ],
+                   [
+                      -93.3099704205173,
+                      44.8949225943877
+                   ],
+                   [
+                      -93.3099387959546,
+                      44.8951060130189
+                   ],
+                   [
+                      -93.3099160818937,
+                      44.8952900972927
+                   ],
+                   [
+                      -93.3099023053978,
+                      44.8954746285707
+                   ],
+                   [
+                      -93.3098947705581,
+                      44.8958359892675
+                   ]
+                ],
+                [
+                   [
+                      -93.3095897371766,
+                      44.8969441468498
+                   ],
+                   [
+                      -93.3093169480637,
+                      44.896943288882
+                   ],
+                   [
+                      -93.3086687098359,
+                      44.8969412455415
+                   ]
+                ],
+                [
+                   [
+                      -93.3098947705581,
+                      44.8958359892675
+                   ],
+                   [
+                      -93.3099048656939,
+                      44.8959907374161
+                   ],
+                   [
+                      -93.3099217431009,
+                      44.8961451866548
+                   ],
+                   [
+                      -93.3099453864273,
+                      44.8962991868442
+                   ],
+                   [
+                      -93.3099757727434,
+                      44.8964525882803
+                   ],
+                   [
+                      -93.310012872564,
+                      44.8966052418399
+                   ],
+                   [
+                      -93.3100136855963,
+                      44.8966512917632
+                   ],
+                   [
+                      -93.3100049569554,
+                      44.8966969255044
+                   ],
+                   [
+                      -93.3099868766254,
+                      44.8967411497004
+                   ],
+                   [
+                      -93.3099598381623,
+                      44.8967830016686
+                   ],
+                   [
+                      -93.309924430128,
+                      44.8968215703639
+                   ],
+                   [
+                      -93.30988142328,
+                      44.8968560162106
+                   ],
+                   [
+                      -93.3098317537944,
+                      44.8968855893792
+                   ],
+                   [
+                      -93.3097765028868,
+                      44.896909646109
+                   ],
+                   [
+                      -93.3097168732768,
+                      44.8969276627231
+                   ],
+                   [
+                      -93.3096541630049,
+                      44.8969392470275
+                   ],
+                   [
+                      -93.3095897371766,
+                      44.8969441468498
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 26,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1237478036000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 233.067,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "LOCAL",
+             "ROUTE_NO": "2AVN",
+             "STREET_T_NAME": "DEAD END (E)",
+             "STREET_F_NAME": "1ST ST N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "00200015DEDE",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.000775957837445277
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.269001780139,
+                      44.9853821532379
+                   ],
+                   [
+                      -93.2683773718897,
+                      44.9858428319803
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 27,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1142603172000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "O",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "MAJOR-COLLECTOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 433.541,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "208",
+             "STREET_T_NAME": "WASHINGTON AVE N",
+             "STREET_F_NAME": "3RD ST N",
+             "STREET_O_NAME": "2ND AVE N",
+             "OFT": "002000353308",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1420,
+             "Shape__Length": 0.00144990462184578
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2725142096278,
+                      44.9828627067241
+                   ],
+                   [
+                      -93.2719463577661,
+                      44.983270454693
+                   ],
+                   [
+                      -93.2713364713117,
+                      44.9837083756139
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 28,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1236950795000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "B-MINOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "STH",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 374.573,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "350",
+             "STREET_T_NAME": "8TH ST N",
+             "STREET_F_NAME": "7TH ST N",
+             "STREET_O_NAME": "1ST AVE N",
+             "OFT": "001000750085",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1333,
+             "Shape__Length": 0.00124707623861714
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2760159308056,
+                      44.978731630253
+                   ],
+                   [
+                      -93.2765366135438,
+                      44.9783476101653
+                   ],
+                   [
+                      -93.2770195643388,
+                      44.9779914148276
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 29,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1236950784000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "B-MINOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "STH",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 437.023,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "350",
+             "STREET_T_NAME": "7TH ST N",
+             "STREET_F_NAME": "6TH ST N",
+             "STREET_O_NAME": "1ST AVE N",
+             "OFT": "001000650075",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1454,
+             "Shape__Length": 0.00146016215887043
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2748320905455,
+                      44.9795863792037
+                   ],
+                   [
+                      -93.2760159308056,
+                      44.978731630253
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 30,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1236950774000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "B-MINOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "STH",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 421.108,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "350",
+             "STREET_T_NAME": "6TH ST N",
+             "STREET_F_NAME": "5TH ST N",
+             "STREET_O_NAME": "1ST AVE N",
+             "OFT": "001000550065",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1454,
+             "Shape__Length": 0.00140668358114761
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2736921328618,
+                      44.9804105485896
+                   ],
+                   [
+                      -93.2748320905455,
+                      44.9795863792037
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 31,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1236950738000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "B-MINOR",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "Y",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "STH",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 433.538,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "MSA",
+             "ROUTE_NO": "350",
+             "STREET_T_NAME": "3RD ST N",
+             "STREET_F_NAME": "WASHINGTON AVE N",
+             "STREET_O_NAME": "1ST AVE N",
+             "OFT": "001033080035",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": 1326,
+             "Shape__Length": 0.00145013903377995
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2702100180645,
+                      44.9829130263476
+                   ],
+                   [
+                      -93.2708122339553,
+                      44.9824810721893
+                   ],
+                   [
+                      -93.2713883719596,
+                      44.9820678131703
+                   ]
+                ]
+             ]
+          }
+       },
+       {
+          "attributes": {
+             "OBJECTID": 32,
+             "ALT_STREET_NAME2": "",
+             "ALT_STREET_NAME1": "",
+             "STREET_CLINE_REVD": 1237478187000,
+             "STREET_CLINE_CREATED": null,
+             "SOURCE_DATE": null,
+             "DIGITIZING_SOURCE": "ORTHOPHOTO",
+             "TRAFFIC_DIR": "T",
+             "SPEED_LIM": 30,
+             "FUNC_CLASS": "",
+             "TRUCK_ROUTE_TYPE": "General",
+             "BUS_ROUTE": "N",
+             "SNOW_EMERGENCY_ROUTE": "Y",
+             "POTHOLE_MAINTENANCE": "CITY",
+             "STREET_MAINT_DIST": "3",
+             "BRIDGE": "",
+             "TURNBACK": "",
+             "SYSTEM_MILEAGE": "Y",
+             "SEGMENT_LENGTH": 227.07,
+             "JURISDICTION": "CITY",
+             "US_ROUTE_NO2": "",
+             "US_ROUTE_NO1": "",
+             "ROUTE_TYPE": "LOCAL",
+             "ROUTE_NO": "1AVN",
+             "STREET_T_NAME": "DEAD END (E)",
+             "STREET_F_NAME": "1ST ST N",
+             "STREET_O_NAME": "1ST AVE N",
+             "OFT": "00100015DEDE",
+             "SYMBOL_NAME": "ROAD_MUNI",
+             "AADT_ID": null,
+             "Shape__Length": 0.00076011364256889
+          },
+          "geometry": {
+             "paths": [
+                [
+                   [
+                      -93.2678815582777,
+                      44.984584
+ 
+ 
+ 
+             
+ 

@@ -30,7 +30,7 @@ if (process.env.DATABASE_URL) {
   config = {
     host: 'localhost', // Server hosting the postgres database
     port: 5432, // env var: PGPORT
-    database: 'prime_app', // CHANGE THIS LINE! env var: PGDATABASE, this is likely the one thing you need to change to get up and running
+    database: 'auth_shelf', // CHANGE THIS LINE! env var: PGDATABASE, this is likely the one thing you need to change to get up and running
     max: 10, // max number of clients in the pool
     idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
   };
@@ -41,7 +41,7 @@ const pool = new pg.Pool(config);
 
 // the pool will log when it connects to the database
 pool.on('connect', () => {
-  console.log('Postgesql connected');
+  console.log('Postgresql connected');
 });
 
 // the pool with emit an error on behalf of any idle clients
