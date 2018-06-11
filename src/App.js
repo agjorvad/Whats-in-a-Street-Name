@@ -12,11 +12,14 @@ import RegisterPage from './components/RegisterPage/RegisterPage';
 import UserPage from './components/UserPage/UserPage';
 import InfoPage from './components/InfoPage/InfoPage';
 import MapPage from './components/MapPage/MapPage';
+// import Search from './components/Search/Search';
+import AddStreet from './components/AddStreet/AddStreet'
+// import AutoComplete from './components/AutoComplete/AutoComplete'
 import './styles/main.css';
 
 const App = () => (
   <div>
-    <Header title="Project Base" />
+    <Header title="What's in a (Street) Name?" />
     <Router>
       <Switch>
         <Redirect exact from="/" to="/home" />
@@ -40,6 +43,19 @@ const App = () => (
           path="/map"
           component={MapPage}
         />
+              <Route
+          path="/addstreet"
+          component={AddStreet}
+        />
+         {/* {/* {/* <Route
+          path="/search"
+          component={Search}
+        /> */}
+    
+           {/* <Route
+          path="/autocomplete"
+          component={AutoComplete} */}
+        {/* />  */}
         {/* OTHERWISE (no path!) */}
         <Route render={() => <h1>404</h1>} />
 

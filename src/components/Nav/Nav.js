@@ -19,6 +19,9 @@ const Nav = () => (
           <Link to="/map">
             Map Page
           </Link>
+          <Link to="/addstreet">
+           Add Street
+          </Link>
         </li>
       </ul>
     </div>
