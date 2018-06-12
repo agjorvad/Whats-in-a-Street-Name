@@ -6,7 +6,7 @@ const router = express.Router();
  * GET route template
  */
 router.get('/', (req, res) => {
-    console.log('GET all route');
+    console.log('GET all route', req.user);
     if (req.isAuthenticated()) {
         let queryText = `SELECT * FROM "streets";`
         pool.query(queryText)
@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
             console.log(result.rows)
             res.send(result.rows);
         }).catch((error) => {
-            console.log('error on item GET: ', error);
+            console.log('error on GET: ', error);
             res.sendStatus(500);
         })
     } else {
