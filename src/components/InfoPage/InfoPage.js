@@ -35,7 +35,7 @@ class InfoPage extends Component {
 
     return (
       <div>
-        <Nav />
+        {/* <Nav /> */}
         { content }
       </div>
     );

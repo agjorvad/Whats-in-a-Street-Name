@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { triggerLogin, formError, clearError } from '../../redux/actions/loginActions';
+import Header from '../Header/Header';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import IconButton from '@material-ui/core/IconButton';
+import FormControl from '@material-ui/core/FormControl';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
+import Button from '@material-ui/core/Button';
+
 
 
 const mapStateToProps = state => ({
@@ -16,6 +26,7 @@ class LoginPage extends Component {
     this.state = {
       username: '',
       password: '',
+      showPassword: false,
     };
   }
 
@@ -23,7 +34,7 @@ class LoginPage extends Component {
     this.props.dispatch(clearError());
   }
 
-  
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.user.userName) {
       this.props.history.push('/user');
@@ -46,6 +57,15 @@ class LoginPage extends Component {
     });
   }
 
+  handleMouseDownPassword = event => {
+    event.preventDefault();
+  };
+
+  handleClickShowPassword = () => {
+    this.setState({ showPassword: !this.state.showPassword });
+  };
+
+
   renderAlert() {
     if (this.props.login.message !== '') {
       return (
@@ -53,7 +73,7 @@ class LoginPage extends Component {
           className="alert"
           role="alert"
         >
-          { this.props.login.message }
+          {this.props.login.message}
         </h2>
       );
     }
@@ -63,43 +83,63 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        { this.renderAlert() }
-        <form onSubmit={this.login}>
-          <h1>Login</h1>
+        {this.renderAlert()}
+        <div>
+        <h1 className="loginForm">Welcome to What's In a (Street) Name!</h1>
+        
+        <form onSubmit={this.login} className="form1">
+         
           <div>
-            <label htmlFor="username">
-              Username:
-              <input
-                type="text"
-                name="username"
+            <FormControl>
+              <InputLabel htmlFor="username">
+                Username:</InputLabel>
+              <Input
+                id="username"
                 value={this.state.username}
                 onChange={this.handleInputChangeFor('username')}
               />
-            </label>
+            </FormControl>
           </div>
           <div>
-            <label htmlFor="password">
-              Password:
-              <input
-                type="password"
-                name="password"
+            <FormControl>
+              <InputLabel htmlFor="password">
+                Password:</InputLabel>
+              <Input
+                id="password"
+                type={this.state.showPassword ? 'text' : 'password'}
                 value={this.state.password}
                 onChange={this.handleInputChangeFor('password')}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="Toggle password visibility"
+                      onClick={this.handleClickShowPassword}
+                    >
+                      {this.state.showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
               />
-            </label>
+            </FormControl>
           </div>
           <div>
-            <input
-              type="submit"
-              name="submit"
-              value="Log In"
-            />
-            <Link to="/register">Register</Link>
+            <p></p>
+            </div>
+          <div>
+            <FormControl>
+            <Button variant="raised" size="small" color="primary" type="submit" value="Log In">
+            Log In
+            </Button>
+            </FormControl>
+            </div>
+            <div>
+              <p>Don't have an account?</p>
+            <Link to="/register">Click Here to Register!</Link>            
           </div>
-        </form>
+        </form>      
+        </div>
       </div>
     );
   }
 }
-
 export default connect(mapStateToProps)(LoginPage);

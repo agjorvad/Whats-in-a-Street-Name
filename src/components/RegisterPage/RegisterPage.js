@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
+import Header from '../Header/Header';
 
 class RegisterPage extends Component {
   constructor(props) {
@@ -33,13 +38,13 @@ class RegisterPage extends Component {
             this.props.history.push('/home');
           } else {
             this.setState({
-              message: 'Ooops! That didn\'t work. The username might already be taken. Try again!',
+              message: 'Oops! That didn\'t work. The username might already be taken. Try again!',
             });
           }
         })
         .catch(() => {
           this.setState({
-            message: 'Ooops! Something went wrong! Is the server running?',
+            message: 'Oops! Something went wrong! Is the server running?',
           });
         });
     }
@@ -69,36 +74,40 @@ class RegisterPage extends Component {
     return (
       <div>
         {this.renderAlert()}
-        <form onSubmit={this.registerUser}>
-          <h1>Register User</h1>
+        <form onSubmit={this.registerUser} className="form1">
+          <h1>Where the Streets Do Have Names</h1>
           <div>
-            <label htmlFor="username">
-              Username:
-              <input
+            <FormControl>
+            <InputLabel htmlFor="username">
+              Username:</InputLabel>
+              <Input
                 type="text"
                 name="username"
                 value={this.state.username}
                 onChange={this.handleInputChangeFor('username')}
               />
-            </label>
+            </FormControl>
           </div>
           <div>
-            <label htmlFor="password">
-              Password:
-              <input
+          <FormControl>
+            <InputLabel htmlFor="password">
+              Password:</InputLabel>
+              <Input
                 type="password"
                 name="password"
                 value={this.state.password}
                 onChange={this.handleInputChangeFor('password')}
               />
-            </label>
+            </FormControl>
           </div>
           <div>
-            <input
-              type="submit"
-              name="submit"
-              value="Register"
-            />
+            <p></p>
+          <FormControl>
+            <Button variant="raised" size="small" color="primary" type="submit" value="Log In">
+            Register
+            </Button>
+            </FormControl>
+              <p></p>
             <Link to="/home">Cancel</Link>
           </div>
         </form>

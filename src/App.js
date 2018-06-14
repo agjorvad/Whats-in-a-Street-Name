@@ -16,6 +16,7 @@ import MapPage from './components/MapPage/MapPage';
 import AddStreet from './components/AddStreet/AddStreet'
 // import AutoComplete from './components/AutoComplete/AutoComplete'
 import './styles/main.css';
+import Demo from './components/Demo/Demo'
 
 const App = () => (
   <div>
@@ -43,9 +44,13 @@ const App = () => (
           path="/map"
           component={MapPage}
         />
-              <Route
+          <Route
           path="/addstreet"
           component={AddStreet}
+        />
+             <Route
+          path="/geolocation"
+          component={Demo}
         />
          {/* {/* {/* <Route
           path="/search"

@@ -47,6 +47,9 @@ function SimpleMediaCard(props) {
         <Button size="small" color="primary">
             <a href={props.selectedPlace.link_url} target="_blank">Learn More</a>
         </Button>
+        <Button size="small" color="primary">
+            <a href="http://localhost:3000/map" target="_blank">Lear</a>
+        </Button>
     </CardActions>
 </Card>
 </div>

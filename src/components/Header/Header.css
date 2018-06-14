@@ -1,0 +1,12 @@
+.banner {
+    width: 100%;
+    display: block;
+}
+
+.logo {
+float: left;
+padding-left: 25px;
+width: 100%;
+display: block;
+}
+

@@ -101,3 +101,13 @@ span#clearFilter {
 span#clearFilter:hover {
     text-decoration: underline;
 }
+
+/* .flexWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+      flex: 1;
+      order: 1;
+      padding: 20px;
+      z-index: 1000;
+    } */
