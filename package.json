@@ -26,6 +26,7 @@
     "pg": "^7.4.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
+    "react-confirm-alert": "^2.0.2",
     "react-dom": "^16.2.0",
     "react-geolocated": "^2.4.0",
     "react-geolocation": "^1.0.3",

@@ -1,44 +1,19 @@
-import React, { Component } from "react";
-import {
-  Paper,
-  Typography,
-  TextField,
-  Button,
-  IconButton,
-  FormControl,
-  Select
-} from "@material-ui/core";
-import List, {
-  ListItem,
-  ListItemText,
-  ListItemSecondaryAction
-} from "@material-ui/core/List";
-import { MenuItem } from "@material-ui/core/Menu";
-import { withStyles } from "@material-ui/core/styles";
-import axios from 'axios';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
-const mapReduxStateToProps = (reduxState) => (
-  { reduxState }
-);
+import { withStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
+import MenuItem from '@material-ui/core/MenuItem';
+import axios from 'axios';
 
 const styles = theme => ({
-  container: {
-   display: "flex",
-   flexWrap: 'wrap',
-   height: 500
-  },
-  header: {
-    display: "flex",
-  },
-  form: {
-    minWidth: 120,
-  },
-  formControl: {
-    margin: theme.spacing.unit,
-    minWidth: 120,
-  },
+    container: {
+        justifyContent: 'center',
+        
+    },
 });
 
 class AddStreet extends Component {
@@ -71,16 +46,6 @@ class AddStreet extends Component {
     console.log(this.state.streetInfo);
     this.postStreet();
   }
-  //     this.setState({
-  //       userList: [...this.state.userList, this.state.user],
-  //     user: {
-  //       name: '',
-  //       city: '',
-  //       zip: '',
-  //     }
-  //   });
-  //   }
-
   postStreet = () => {
     axios.post('/api/street', this.state.streetInfo)
       .then((response) => {
@@ -91,80 +56,82 @@ class AddStreet extends Component {
       })
   }
 
-  render() {
+render() {
+
     const { classes } = this.props;
 
     return (
-      <Paper className={classes.container}>
-        <Typography variant="display1" align="center" gutterBottom>
-          Exercises
-        </Typography>
-        <form onSubmit={this.handleSubmit} className={classes.form}>
-        <FormControl className={classes.formControl}>
-          <TextField
-            name="title"
-            label="Street Name"
-            value={this.state.streetInfo.street_name}
-            onChange={this.handleChangeFor("street_name") }
-            margin="normal"
-          />
-          </FormControl>
-          <FormControl className={classes.formControl}>
-          <TextField
-            name="title"
-            label="Street Name"
+        <div className={classes.root}>
+              <Grid container spacing={32}>
+        <form  className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+        <Grid item xs={12}>
+
+            <TextField
+                  label="Street Name"
+                  value={this.state.streetInfo.street_name}
+                  onChange={this.handleChangeFor('street_name') }
+                  margin="normal"
+            />
+            </Grid>
+            <Grid item xs={12}>
+            <TextField
+            label="Street History"
             value={this.state.streetInfo.street_history}
             onChange={this.handleChangeFor("street_history")}
-            margin="normal"
-          />
-          </FormControl>
-          <FormControl className={classes.formControl}>
-          <TextField
-            name="title"
+            margin="normal" />
+            </Grid>
+
+            <Grid item xs={12}>
+            <TextField
             label="Latitude"
             value={this.state.streetInfo.latitude}
             onChange={this.handleChangeFor("latitude")}
             margin="normal"
-          />
-          </FormControl>
-          <FormControl className={classes.formControl}>
-          <TextField
-            name="title"
-            label="Longitude"
-            value={this.state.streetInfo.longitude}
-            onChange={this.handleChangeFor("longitude")}
-            margin="normal"
-          />
-          </FormControl>
-          <FormControl className={classes.formControl}>
-          <TextField
-            name="title"
+            />
+            </Grid>
+            <Grid item xs={12}>
+            <TextField
+                 name="title"
+                 label="Longitude"
+                 value={this.state.streetInfo.longitude}
+                 onChange={this.handleChangeFor("longitude")}
+                 margin="normal"
+            />
+            </Grid>
+            <Grid item xs={12}>
+            <TextField 
             label="Image Url"
             value={this.state.streetInfo.image_url}
             onChange={this.handleChangeFor("image_url")}
             margin="normal"
-          />
-          </FormControl>
-          <FormControl className={classes.formControl}>
-          <TextField
-            name="title"
-            label="Link Url"
+            />
+            </Grid>
+            <Grid item xs={12}>
+            <TextField
+                 label="Link Url"
             value={this.state.streetInfo.link_url}
             onChange={this.handleChangeFor("link_url")}
             margin="normal"
-          />
-          </FormControl>
-          <Button type="submit" color="primary" variant="raised">
-            Submit Street History
-          </Button>
+            />
+            </Grid>
+
+                <FormControl>
+                    <Button variant="raised" size="small" color="primary" type="submit">
+                        Submit Street History
+            </Button>
+                </FormControl>
+
         </form>
-      </Paper>
+        </Grid>
+        </div>
     );
-  }
 }
+  }
+
 
 AddStreet.propTypes = {
     classes: PropTypes.object.isRequired,
-  };
+};
+
 export default withStyles(styles)(AddStreet);
 

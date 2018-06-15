@@ -43,4 +43,23 @@ if(req.isAuthenticated()) {
 }
 });
 
+router.delete('/:id', (req, res) => {
+    console.log(req.params);
+    const street_id = req.params.id;
+    console.log(street_id);
+    if (req.isAuthenticated()) {
+    pool.query(`DELETE FROM "streets"
+                        WHERE "id" = ($1);`, [street_id])
+        .then((results) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log('problem with DELETE from database', error);
+            res.sendStatus(500);
+        });
+    }else {
+            res.sendStatus(403);
+        }
+});
+
 module.exports = router;
