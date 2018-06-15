@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -7,6 +6,11 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 // import { mailFolderListItems, otherMailFolderListItems } from './tileData';
+import { connect } from 'react-redux';
+
+const mapStateToProps = reduxState => ({
+  reduxState
+})
 
 const styles = {
   list: {
@@ -16,9 +20,11 @@ const styles = {
     width: 'auto',
   },
   toggleButton: {
-      marginLeft: 'auto',
-      marginRight: -12
-      
+    // marginLeft: -12,
+    // marginRight: 'auto',
+    float: 'right',
+    marginTop: -40
+
   }
 };
 
@@ -30,6 +36,12 @@ class StreetList extends React.Component {
     right: false,
   };
 
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'FETCH_STREETS',
+    })
+  }
+
   toggleDrawer = (side, open) => () => {
     this.setState({
       [side]: open,
@@ -37,81 +49,45 @@ class StreetList extends React.Component {
   };
 
   render() {
+    // console.log('street list render reduxState: ', this.props.reduxState);
     const { classes } = this.props;
 
-    const sideList = (
-      <div className={classes.list}>
-        <List>Blah</List>
-        <Divider />
-        <List>Blah</List>
-      </div>
-    );
-
-    const fullList = (
-      <div className={classes.fullList}>
-        <List>Blah</List>
-        <Divider />
-        <List>Blah</List>
-      </div>
-    );
+    // const roads = this.props.reduxState.roads.map(item =>
+    //     <List>{item.street_name}</List>
+    //   );
 
     return (
-      <div className={classes.toggleButton}>
-        {/* <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button> */}
-        <Button onClick={this.toggleDrawer('right', true)}>Open Right</Button>
-        {/* <Button onClick={this.toggleDrawer('top', true)}>Open Top</Button>
-        <Button onClick={this.toggleDrawer('bottom', true)}>Open Bottom</Button> */}
-        {/* <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('left', false)}
-            onKeyDown={this.toggleDrawer('left', false)}
-          >
-            {sideList}
-          </div>
-        </Drawer> */}
-        {/* <Drawer anchor="top" open={this.state.top} onClose={this.toggleDrawer('top', false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('top', false)}
-            onKeyDown={this.toggleDrawer('top', false)}
-          >
-            {fullList}
-          </div>
-        </Drawer>
-        <Drawer
-          anchor="bottom"
-          open={this.state.bottom}
-          onClose={this.toggleDrawer('bottom', false)}
-        >
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('bottom', false)}
-            onKeyDown={this.toggleDrawer('bottom', false)}
-          >
-            {fullList}
-          </div>
-        </Drawer> */}
-        <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
-          <div
-            tabIndex={0}
-            role="button"
-            onClick={this.toggleDrawer('right', false)}
-            onKeyDown={this.toggleDrawer('right', false)}
-          >
-            {sideList}
-          </div>
-        </Drawer>
+      <div>
+      
+        <div className={classes.toggleButton}>
+          {/* <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button> */}
+          <Button onClick={this.toggleDrawer('right', true)}>Open Right</Button>
+          <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
+            <div
+              tabIndex={0}
+              role="button"
+              onClick={this.toggleDrawer('right', false)}
+              onKeyDown={this.toggleDrawer('right', false)}
+            >
+            </div>
+            <div className={classes.list}>
+              {/* {roads} */}
+              {this.props.reduxState.roads.map(item =>
+                <List>{item.street_name}</List>
+              )}
+              }
+            </div>
+
+          </Drawer>
+        </div>
       </div>
-    );
+    ); // end return
   }
 }
 
 StreetList.propTypes = {
-  classes: PropTypes.object.isRequired,
+  // classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(StreetList);
+const styling = withStyles({ styles })(StreetList)
+export default connect(mapStateToProps)(styling)

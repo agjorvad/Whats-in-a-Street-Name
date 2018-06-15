@@ -28,11 +28,11 @@ function Nav(props) {
         <ListItem button component='a' href="/addstreet">
           <ListItemText primary="Add streets" />
         </ListItem>
+        <ListItem button component='a' href="/editstreet">
+          <ListItemText primary="Edit streets" />
+        </ListItem>
         <ListItem button component='a' href="/map">
           <ListItemText primary="Map" />
-        </ListItem>
-        <ListItem button component='a' href="/geolocation">
-          <ListItemText primary="Geolocate" />
         </ListItem>
       </List>
     </div>
