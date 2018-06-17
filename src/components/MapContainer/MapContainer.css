@@ -12,6 +12,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* z-index: -1;
+  position: relative */
 }
 
 .main {
@@ -20,11 +22,15 @@ body {
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
   width: 80%;
   margin: 0 auto;
+  /* z-index: 1;
+  position: relative */
 }
 
 .form-container {
   background-color: #2c3e50;
   height: 90vh;
+  /* z-index: 2;
+  position: relative */
 }
 
  .location-search-input {
@@ -39,12 +45,23 @@ body {
   margin-bottom: 30px;
   margin-right: 20px;
   font-size: 20px;
+  /* position: relative;
+  z-index: 9999 */
 }
 
 input[type="text"] { 
     outline: none;
+    /* position: relative;
+    z-index: 9999 */
 }
 
+.autocomplete-dropdown-container {
+margin-top: -30px;
+width: 1140px;
+font-size: 18px;
+color: white;
+font-weight: lighter;
+}
 /* button {
   border: 0;
   padding: 8px 20px;

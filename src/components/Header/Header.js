@@ -23,9 +23,12 @@ import './Header.css';
 const styles = {
   root: {
     flexGrow: 1,
+    position: 'relative',
+    zIndex: 1000
   },
   flex: {
     flex: 1,
+    color: 'white'
   },
   menuButton: {
     marginLeft: -12,
@@ -40,7 +43,7 @@ function Header(props) {
       <AppBar position="static">
         <Toolbar>
           <MenuListComposition />
-          <Typography variant="title" className={classes.flex}>
+          <Typography variant="title" className={classes.flex} style={{color: 'white'}}>
           What's In a (Street) Name?
           {/* <img src="images/yikekp7pT.jpeg" alt="skyline" height="150" className="logo" /> */}
          </Typography>

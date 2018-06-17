@@ -103,6 +103,7 @@ class MapContainer extends Component {
                     onClick={this.onMarkerClick}
                     history={item.street_history}
                     name={item.street_name}
+                    image_url={item.image_url}
                     position={{ lat: item.latitude, lng: item.longitude }}
                     link_url={item.link_url}
                     icon={{
@@ -127,7 +128,7 @@ class MapContainer extends Component {
                                             onClick={this.onMapClicked}
                                             google={this.props.google}
                                             zoom={16}
-                                            style={{ height: '620px', width: '1140px', position: 'absolute', top: '100px' }}
+                                            style={{ height: '612px', width: '1140px', position: 'absolute', top: '150px', zIndex: '1'}}
                                             initialCenter={{ lat: this.props.latitude, lng: this.props.longitude }}
                                             center={this.state.latLng}
                                             bounds={this.bounds}>
@@ -151,8 +152,8 @@ class MapContainer extends Component {
                                                                 const className = suggestion.active ? 'suggestion-item--active' : 'suggestion-item';
                                                                 // inline style for demonstration purpose
                                                                 const style = suggestion.active
-                                                                    ? { backgroundColor: '#fafafa', cursor: 'pointer' }
-                                                                    : { backgroundColor: '#ffffff', cursor: 'pointer' };
+                                                                    ? { backgroundColor: 'black', cursor: 'pointer' }
+                                                                    : { backgroundColor: '#2c3e50', cursor: 'pointer' };
                                                                 return (
                                                                     <div {...getSuggestionItemProps(suggestion, { className, style })}>
                                                                         <span>{suggestion.description}</span>
@@ -169,7 +170,6 @@ class MapContainer extends Component {
                                                 <MediaCard selectedPlace={this.state.selectedPlace} />
                                             </InfoWindow>
                                         </Map>
-                                        />
                 </div>
                                 </div>
                             </div>

@@ -18,22 +18,24 @@ const styles = {
     textAlign: 'center',
     maxWidth: 345,
     align: 'center',
+    objectFit: 'contain'
 },
   media: {
     height: 75,
     paddingTop: '56.25%', // 16:9
+    objectFit: 'contain'
   },
 };
 
 function SimpleMediaCard(props) {
   const { classes } = props;
+  console.log(props.selectedPlace.image_url)
   return (
 <div>
 <Card className={classes.card}>
     <CardMedia
         className={classes.media}
-        // style={{height: "250px"}}
-        image="images/sir-isaac-newton-9422656-1-402.jpg"
+        image={props.selectedPlace.image_url}
         title="Isaac Newton" />
     <CardContent>
         <Typography gutterBottom variant="headline" component="h2">

@@ -31,6 +31,8 @@ class AddStreet extends Component {
     }
   }
 
+  
+
   handleChangeFor = propertyName => event => {
     console.log(event.target.value);
     this.setState({
