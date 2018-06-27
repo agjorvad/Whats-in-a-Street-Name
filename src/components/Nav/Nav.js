@@ -25,11 +25,11 @@ function Nav(props) {
         <ListItem button component='a' href="/info">
           <ListItemText primary="Info Page" />
         </ListItem>
-        <ListItem button component='a' href="/addstreet">
-          <ListItemText primary="Add streets" />
-        </ListItem>
+        {/* <ListItem button component='a' href="/addstreet">
+          <ListItemText primary="Add streets" /> */}
+        {/* </ListItem> */}
         <ListItem button component='a' href="/editstreet">
-          <ListItemText primary="Edit streets" />
+          <ListItemText primary="Edit Streets" />
         </ListItem>
         <ListItem button component='a' href="/map">
           <ListItemText primary="Map" />

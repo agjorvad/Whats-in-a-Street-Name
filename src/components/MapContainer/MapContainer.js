@@ -7,6 +7,7 @@ import { geocodeByAddress, geocodeByPlaceId, getLatLng } from 'react-places-auto
 import MediaCard from '../MediaCard/MediaCard'
 import './MapContainer.css'
 import StreetList from '../StreetList/StreetList'
+import AddStreet from '../AddStreet/AddStreet'
 // import {geolocated} from 'react-geolocated';
 
 const mapStateToProps = state => ({
@@ -115,6 +116,7 @@ class MapContainer extends Component {
             console.log(this.state.streetList)
             return (
                 <div>
+                    <AddStreet get={this.getAllStreets}/>
                     <StreetList />
                     <div className="wrapper">
                         <div className="main">
@@ -128,7 +130,7 @@ class MapContainer extends Component {
                                             onClick={this.onMapClicked}
                                             google={this.props.google}
                                             zoom={16}
-                                            style={{ height: '612px', width: '1140px', position: 'absolute', top: '150px', zIndex: '1'}}
+                                            style={{ height: '634px', width: '1140px', position: 'absolute', top: '150px', zIndex: '1'}}
                                             initialCenter={{ lat: this.props.latitude, lng: this.props.longitude }}
                                             center={this.state.latLng}
                                             bounds={this.bounds}>

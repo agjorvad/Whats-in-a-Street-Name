@@ -7,7 +7,7 @@ function* rootSaga()    {
 
 function* fetchStreets() {
     try{
-      const streetResponse = yield call(axios.get, '/api/street');
+      const streetResponse = yield call(axios.get, '/api/mediacard');
       yield dispatch({
         type: 'SET_STREETS',
         payload: streetResponse.data

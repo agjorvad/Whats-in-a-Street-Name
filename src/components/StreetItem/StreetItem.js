@@ -27,11 +27,12 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import {connect} from 'react-redux'
+import swal from 'sweetalert'
 
 const styles = {
 card: {
     width: 395,
-    height: 450,
+    height: 600,
     marginBottom: 12,
 },
 title: {
@@ -42,7 +43,7 @@ pos: {
     marginBottom: 12,
 },
 media: {
-    height: 0,
+    height: 200,
     paddingTop: '56.25%', // 16:9
 },
 // dialog: {
@@ -67,27 +68,24 @@ class StreetItem extends Component {
             newStreetInfo: {
             street_name: this.props.item.street_name,
             street_history: this.props.item.street_history,
-            latitude: this.props.item.latitude,
-            longitude: this.props.item.longitude,
+            image_url: this.props.item.image_url,
             link_url: this.props.item.link_url,
             person_id: this.props.item.person_id,
-            id: this.props.item.id
+            street_id: this.props.item.street_id
             }
         }
     }
 
-    componentDidUpdate() {
-        this.getAllStreets();
-    }
     handleClickOpen = () => {
         this.setState({ open: true });
       };
     
       handleClose = () => {
         this.setState({ open: false });
+        this.getAllMediaCards();
       };
 
-    getAllStreets = () => {
+      getAllStreets = () => {
         axios.get('/api/street')
             .then(response => {
                 console.log(response.data);
@@ -99,14 +97,34 @@ class StreetItem extends Component {
             .catch((error) => {
                 console.log('error on get: ', error);
             })
+        }
+
+    getAllMediaCards = () => {
+        axios.get('/api/mediacard')
+            .then(response => {
+                console.log(response.data);
+                this.setState({
+                    mediaCardList: response.data,
+                })
+                console.log(this.state.mediaCardList)
+            })
+            .catch((error) => {
+                console.log('error on get: ', error);
+            })
     }
 
     editStreet = street => {
         console.log
-        axios.put(`/api/street`, street)
+        axios.put(`/api/mediacard`, street)
           .then(response => {
-            console.log(response);
-            this.getAllStreets();
+            console.log('this is after an EDIT', response);
+            this.handleClose();
+            // swal({
+            //     title: 'You have successfully edited the street',
+            //     icon: 'success',
+            // });
+            this.getAllMediaCards();
+            window.location.reload();
           }).catch(error => {
             console.log(error);
           })
@@ -140,11 +158,11 @@ class StreetItem extends Component {
         const { classes } = this.props;
         return (
             <div>
-            <Card className={classes.card} style={{maxHeight: 425, overflow: 'auto', margin: 8}}>
+            <Card className={classes.card} style={{maxHeight: 1000, overflow: 'auto', margin: 8}}>
                 <CardMedia
                     className={classes.media}
-                    image= "images/sir-isaac-newton-9422656-1-402.jpg"
-                    title="High Intensity Interval Training"
+                    image= {this.props.item.image_url}
+                    title="Image"
                 />
                 <CardContent>
                     <Typography variant="headline" component="h1">
@@ -153,18 +171,18 @@ class StreetItem extends Component {
                     <Typography component="p">
                         {this.props.item.street_history}
                     </Typography>
-                    <Typography component="p">
+                    {/* <Typography component="p">
                         Latitude: {this.props.item.latitude}
                     </Typography>
                     <Typography component="p">
                         Longitude: {this.props.item.longitude}
-                    </Typography>
+                    </Typography> */}
                     <Typography component="p">
-                        Link Url: <a href={this.props.item.link_url} target="_blank">{this.props.item.link_url}</a>
+                        Link URL: <a href={this.props.item.link_url} target="_blank">{this.props.item.link_url}</a>
                         </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button variant="fab" mini color="secondary" aria-label="delete" onClick={() => this.props.delete(this.props.item.id)}><DeleteIcon /></Button>
+                    <Button variant="fab" mini color="secondary" aria-label="delete" onClick={() => this.props.delete(this.props.item)}><DeleteIcon /></Button>
                     <Button variant="fab" mini color="secondary" aria-label="edit" onClick={this.handleClickOpen}><EditIcon /></Button>
                 </CardActions>
             </Card>
@@ -182,9 +200,9 @@ class StreetItem extends Component {
         rows={4}
         className="input" style={{width: 500}} onChange={this.handleChangeEdit('street_history')} defaultValue={this.props.item.street_history} placeholder='Street History' />
         <br />
-        <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('latitude')} defaultValue={this.props.item.latitude} placeholder='Latitude' />
-        <br />
-        <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('longitude')} defaultValue={this.props.item.longitude} placeholder='Longitude' />
+        {/* <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('latitude')} defaultValue={this.props.item.latitude} placeholder='Latitude' />
+        <br /> */}
+        <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('image_url')} defaultValue={this.props.item.image_url} placeholder='Image URL' />
         <br />
         <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('link_url')} defaultValue={this.props.item.link_url} placeholder='Link URL' />
         <br />

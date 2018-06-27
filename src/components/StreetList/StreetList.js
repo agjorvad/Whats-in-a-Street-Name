@@ -63,7 +63,7 @@ class StreetList extends React.Component {
       <div>
         <div className="toggleButton">
           {/* <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button> */}
-          <Button onClick={this.toggleDrawer('right', true)} style={{textAlign: 'right', float: 'right', marginTop:'-40px'}}>Show List</Button>
+          <Button onClick={this.toggleDrawer('right', true)} style={{textAlign: 'right', float: 'right', marginTop:'-37px'}}>Show List</Button>
           </div>
           <Drawer anchor="right" open={this.state.right} onClose={this.toggleDrawer('right', false)}>
           

@@ -44,6 +44,7 @@
     "redux-saga": "^0.16.0",
     "request": "^2.87.0",
     "sequelize": "^4.37.10",
+    "sweetalert": "^2.1.0",
     "webpack": "^3.11.0"
   },
   "scripts": {

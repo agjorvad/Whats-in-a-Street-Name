@@ -21,7 +21,7 @@ const styles = {
     objectFit: 'contain'
 },
   media: {
-    height: 75,
+    height: 110,
     paddingTop: '56.25%', // 16:9
     objectFit: 'contain'
   },
@@ -46,7 +46,7 @@ function SimpleMediaCard(props) {
         </Typography>
     </CardContent>
     <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" color="link">
             <a href={props.selectedPlace.link_url} target="_blank">Learn More</a>
         </Button>
     </CardActions>

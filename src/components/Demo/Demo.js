@@ -33,7 +33,9 @@ class Demo extends React.Component {
             </table>
             <MapPage longitude={this.props.coords.longitude} latitude={this.props.coords.latitude} />
           </span>
-          : <div>Getting your location data&hellip; </div>;
+          : <div>
+            <h1 data-text="It's loading…">Loading…</h1>
+          </div>;
   }
 }
 
@@ -41,5 +43,5 @@ export default geolocated({
   positionOptions: {
     enableHighAccuracy: false,
   },
-  userDecisionTimeout: 5000,
+  userDecisionTimeout: 500000,
 })(Demo); 

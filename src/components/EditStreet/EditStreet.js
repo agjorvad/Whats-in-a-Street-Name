@@ -17,6 +17,7 @@ import Grid from '@material-ui/core/Grid';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
+import swal from 'sweetalert'
 // import swal from 'sweetalert';
 
 const mapStateToProps = state => ({
@@ -37,14 +38,14 @@ class EditStreet extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            streetList: [],
+            mediaCardList: [],
             spacing: '16',
         }
     }
 
     componentDidMount() {
         this.props.dispatch({type: USER_ACTIONS.FETCH_USER});
-        this.getAllStreets();
+        this.getAllMediaCards();
       };
     
       componentDidUpdate() {
@@ -53,14 +54,14 @@ class EditStreet extends Component {
         }
       };
 // Get request
-getAllStreets = () => {
-    axios.get('/api/street')
+getAllMediaCards = () => {
+    axios.get('/api/mediacard')
         .then(response => {
             console.log(response.data);
             this.setState({
-                streetList: response.data,
+                mediaCardList: response.data,
             })
-            console.log(this.state.streetList)
+            console.log(this.state.mediaCardList)
         })
         .catch((error) => {
             console.log('error on get: ', error);
@@ -71,12 +72,19 @@ getAllStreets = () => {
         console.log(entryToDelete)
         axios({
             method: 'DELETE',
-            url: `/api/street/${entryToDelete}`,
+            url: '/api/mediacard',
+            params: entryToDelete 
+           
 
         })
             .then((response) => {
                 console.log('success', response);
-                this.getAllStreets();
+                this.getAllMediaCards();
+                swal({
+                    title: 'Street was deleted successfully',
+                
+                });
+                window.location.reload();
             })
             .catch((error) => {
                 console.log('There was a problem', error);
@@ -88,7 +96,7 @@ getAllStreets = () => {
     //     axios.put(`/api/street`, street)
     //       .then(response => {
     //         console.log(response);
-    //         this.getAllStreets();
+    //         this.getAllMediaCards();
     //         this.handleEditToggle();
     //       }).catch(error => {
     //         console.log(error);
@@ -133,7 +141,10 @@ getAllStreets = () => {
                 },
                 {
                     label: 'No',
-                    onClick: () => alert('Delete cancelled')
+                    onClick: () =>  swal({
+                        title: 'Delete cancelled',
+                    
+                    })
                 }
             ]
         })
@@ -144,7 +155,7 @@ getAllStreets = () => {
     //     axios.put('/api/street', street)
     //     .then((response) => {
     //         console.log('put request success!', response);
-    //         this.getAllStreets();
+    //         this.getAllMediaCards();
     //     })
     //     // .catch((error) => {
     //     //     console.log('error on put hiit article:', error);
@@ -193,7 +204,7 @@ getAllStreets = () => {
                             <Grid container className={classes.root} spacing={16}>
                                 <Grid item xs={12}>
                                     <Grid container className={classes.demo} justify="flex-start">
-                                        {this.state.streetList.map(item =>
+                                        {this.state.mediaCardList.map(item =>
                                             <StreetItem key={item.id}
                                                 item={item}
                                                 delete={this.confirmDelete}

@@ -6,7 +6,7 @@ import Nav from '../../components/Nav/Nav';
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { triggerLogout } from '../../redux/actions/loginActions';
 import Header from '../Header/Header';
-
+import Button from '@material-ui/core/Button'
 const mapStateToProps = state => ({
   user: state.user,
 });
@@ -38,11 +38,11 @@ class UserPage extends Component {
           >
             Welcome, { this.props.user.userName }!
           </h1>
-          <button
+          <Button variant="raised" color="primary"
             onClick={this.logout}
           >
             Log Out
-          </button>
+          </Button>
         </div>
       );
     }

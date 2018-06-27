@@ -18,6 +18,7 @@ import AddStreet from './components/AddStreet/AddStreet'
 import './styles/main.css';
 import Demo from './components/Demo/Demo'
 import EditStreet from './components/EditStreet/EditStreet'
+import StreetItem from './components/StreetItem/StreetItem'
 
 const App = () => (
   <div>
