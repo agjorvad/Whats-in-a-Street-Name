@@ -1,7 +1,9 @@
-# Express/Passport with React
-This version uses React to control the login requests and redirection in coordination with client-side routing.
+## About
 
-We **STONGLY** recommend following these instructions carefully. It's a lot, and will take some time to set up, but your life will be much easier this way in the long run.
+To offer users a window into local history and connect them to the geography of the streets they walk each day, I created an application that allows a user to discover the history behind street names in the city of Minneapolis.
+A user can control an interactive map to select a Minneapolis street and populate an informational media card that contains the history behind that street’s name, including pictures and links to additional information.  
+The app uses geolocation to pinpoint your location upon opening the map and an autocomplete street search function powered by Google Maps Places Library.
+Technologies used include: React, Node, Express, PostgreSQL, Overpass API, Google Maps API, Heroku, and react-google-maps.
 
 ## Prerequisites
 
