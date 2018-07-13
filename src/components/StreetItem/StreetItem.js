@@ -12,7 +12,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-// import classNames from 'classnames';
 import moment from 'moment';
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddIcon from '@material-ui/icons/Add';
@@ -20,10 +19,8 @@ import EditIcon from '@material-ui/icons/ModeEdit';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-// import DialogContentText from '@material-ui/core/DialogContentText';
 import TextField from '@material-ui/core/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
-// import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import {connect} from 'react-redux'
@@ -46,10 +43,6 @@ media: {
     height: 200,
     paddingTop: '56.25%', // 16:9
 },
-// dialog: {
-//     minHeight: 200,
-//     minWidth: 100,
-// }
 };
 const customContentStyle = {
     width: '100%',
@@ -119,10 +112,6 @@ class StreetItem extends Component {
           .then(response => {
             console.log('this is after an EDIT', response);
             this.handleClose();
-            // swal({
-            //     title: 'You have successfully edited the street',
-            //     icon: 'success',
-            // });
             this.getAllMediaCards();
             window.location.reload();
           }).catch(error => {
@@ -190,8 +179,7 @@ class StreetItem extends Component {
             contentStyle={customContentStyle}
       open={this.state.open}
       onClose={this.handleClose}
-      aria-labelledby="form-dialog-title"
-    >
+      aria-labelledby="form-dialog-title">
       <DialogContent>
         <TextField margin="dense" style={{width: 500}} autoFocus className="input" onChange={this.handleChangeEdit('street_name')} defaultValue={this.props.item.street_name} placeholder='Street Name' />
         <br />
@@ -200,25 +188,10 @@ class StreetItem extends Component {
         rows={4}
         className="input" style={{width: 500}} onChange={this.handleChangeEdit('street_history')} defaultValue={this.props.item.street_history} placeholder='Street History' />
         <br />
-        {/* <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('latitude')} defaultValue={this.props.item.latitude} placeholder='Latitude' />
-        <br /> */}
         <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('image_url')} defaultValue={this.props.item.image_url} placeholder='Image URL' />
         <br />
         <TextField className="input" style={{width: 500}} onChange={this.handleChangeEdit('link_url')} defaultValue={this.props.item.link_url} placeholder='Link URL' />
         <br />
-        {/* <FormControl> */}
-
-          {/* <Select
-            value={this.state.updateHiitArticle.article_type}
-            onChange={this.handleChangeEdit('article_type')}
-            displayEmpty
-          >
-            <MenuItem value={'strength training'}>Strength Training</MenuItem>
-            <MenuItem value={'aerobic training'}>Aerobic Training</MenuItem>
-            <MenuItem value={'high intensity interval training'}>High Intensity Interval Training</MenuItem>
-            <MenuItem value={'yoga'}>Yoga</MenuItem>
-          </Select> */}
-        {/* </FormControl> */}
         </DialogContent>
       <DialogActions>
         <Button variant="contained" onClick={this.handleClose}>
@@ -227,46 +200,7 @@ class StreetItem extends Component {
         <Button variant="raised" color="primary" onClick={() => this.editStreet(this.state.newStreetInfo)}>Save Changes</Button>
       </DialogActions>
     </Dialog>
-        {/* <br />
-        <TextField
-          multiline={true}
-          rows={4}
-          className="input" onChange={this.handleChangeEdit('study_details')} value={this.state.updateHiitArticle.study_details} placeholder='Study details here' />
-        <br />
-        <TextField type="date" className="input" onChange={this.handleChangeEdit('date_posted')} value={this.state.updateHiitArticle.date_posted} placeholder='Date posted' /> */}
-
-     
         </div>
-//             < TableRow>
-//                 <TableCell>
-//                 <TextField
-//                   defaultValue={this.props.item.street_name}
-//                   onChange={this.handleChangeEdit('street_name') }
-//                     />
-//                        <Button onClick={() => this.handleEdit(this.state.newStreetInfo)}>Save</Button>
-//                     <Button onClick={this.handleEditToggle}>Cancel</Button>
-//                 </TableCell>
-//                 <TableCell>
-//                     {this.props.item.street_history}
-//                 </TableCell>
-//                 <TableCell>
-//                     {this.props.item.latitude}
-//                 </TableCell>
-//                 <TableCell>
-//                     {this.props.item.longitude}
-//                 </TableCell>
-//                 <TableCell>
-//                     {this.props.item.link_url}
-//                 </TableCell>
-//                 <TableCell>
-//                     <Button onClick={this.handleEditToggle}>Edit</Button>
-//                     <Button onClick={() => { this.props.delete(this.props.item.id) }} variant="raised" color="secondary">
-//                         Delete
-// <Delete />
-//                     </Button>
-        
-//                 </TableCell>
-//             </TableRow>
         )
     }
 }

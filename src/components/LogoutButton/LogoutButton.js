@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { triggerLogout } from '../../redux/actions/loginActions';
 import Button from '@material-ui/core/Button';
+import { Link, browserHistory, withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => ({
     user: state.user,

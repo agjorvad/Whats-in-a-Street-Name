@@ -12,8 +12,6 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Button from '@material-ui/core/Button';
 
-
-
 const mapStateToProps = state => ({
   user: state.user,
   login: state.login,

@@ -55,7 +55,6 @@ function SimpleMediaCard(props) {
   );
 }
 
-
 SimpleMediaCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };

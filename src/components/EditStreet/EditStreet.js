@@ -90,42 +90,7 @@ getAllMediaCards = () => {
                 console.log('There was a problem', error);
             })
     }
-
-    // editStreet = street => {
-    //     console.log
-    //     axios.put(`/api/street`, street)
-    //       .then(response => {
-    //         console.log(response);
-    //         this.getAllMediaCards();
-    //         this.handleEditToggle();
-    //       }).catch(error => {
-    //         console.log(error);
-    //       })
-    //   }
-
-    //   handleChangeEdit = propertyName => event => {
-    //     this.setState({
-    //       newStreetInfo: {
-    //         ...this.state.newStreetInfo,
-    //         propertyName: event.target.value,
-    //       }
-    //     });
-    //     console.log(event.target.value);
-    //   }
-
-    //   handleEditToggle = (street) => {
-    //     console.log('edit button clicked');
-    //     this.setState({
-    //       editable: !this.state.editable,
-    //     });
-    //     console.log(this.state.editable);
-    //   }
     
-    //   handleEdit = (street) => {
-    //     console.log('edit button clicked');
-    //     console.log(this.state.editable);
-    //     this.editStreet(street);
-    //   }
 // Get feedback runs on page load
 
 // Dialog box to confirm delete
@@ -150,48 +115,6 @@ getAllMediaCards = () => {
         })
     };
 
-    // updateStreetInfo = street => {
-    //     console.log('updatedStreet:', street);
-    //     axios.put('/api/street', street)
-    //     .then((response) => {
-    //         console.log('put request success!', response);
-    //         this.getAllMediaCards();
-    //     })
-    //     // .catch((error) => {
-    //     //     console.log('error on put hiit article:', error);
-    //     //     swal({
-    //     //         title: 'You can only edit articles you added!',
-    //     //         icon: 'warning',
-    //     //     });
-    //     // })    
-    // }
-
-    // render() {
-    //     return (
-    //         <div className="Admin">
-    //             <Table>
-    //                 <TableHead>
-    //                     <TableRow>
-    //                         <TableCell>Street Name</TableCell>
-    //                         <TableCell>Street History</TableCell>
-    //                         <TableCell>Latitude</TableCell>
-    //                         <TableCell>Longitude</TableCell>
-    //                         <TableCell>Link Url</TableCell>
-    //                         <TableCell>Delete</TableCell>
-    //                     </TableRow>
-    //                 </TableHead>
-    //                 <TableBody>
-    //                     {this.state.streetList.map(item =>
-    //                         <StreetItem key={item.id}
-    //                             item={item}
-    //                             delete={this.confirmDelete}
-    //                          />
-    //                     )}
-    //                 </TableBody>
-    //             </Table>
-    //         </div>
-    //     );
-    // }
     render() {
         let content = null;
         const { classes } = this.props;

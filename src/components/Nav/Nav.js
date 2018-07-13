@@ -5,7 +5,12 @@ import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-
+import { Link, browserHistory, withRouter } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import { USER_ACTIONS } from '../../redux/actions/userActions';
+import { connect } from 'react-redux';
+import { triggerLogout } from '../../redux/actions/loginActions';
+import LogoutButton from '../LogoutButton/LogoutButton';
 const styles = theme => ({
   root: {
     width: '100%',
@@ -14,8 +19,15 @@ const styles = theme => ({
   },
 });
 
-function Nav(props) {
-  const { classes } = props;
+class Nav extends React.Component{
+
+  logout = () => {
+    this.props.dispatch(triggerLogout());
+    this.props.history.push('login');
+  }
+
+render() {
+  const { classes } = this.props;
   return (
     <div className={classes.root}>
       <List component="nav">
@@ -25,18 +37,20 @@ function Nav(props) {
         <ListItem button component='a' href="/info">
           <ListItemText primary="Info Page" />
         </ListItem>
-        {/* <ListItem button component='a' href="/addstreet">
-          <ListItemText primary="Add streets" /> */}
-        {/* </ListItem> */}
         <ListItem button component='a' href="/editstreet">
           <ListItemText primary="Edit Streets" />
         </ListItem>
         <ListItem button component='a' href="/map">
           <ListItemText primary="Map" />
         </ListItem>
+        <ListItem button component='nav'>
+          <ListItemText primary="Logout" />
+          <LogoutButton />
+        </ListItem>
       </List>
     </div>
   );
+}
 }
 
 Nav.propTypes = {
@@ -45,30 +59,3 @@ Nav.propTypes = {
 
 export default withStyles(styles)(Nav);
 
-// const Nav = () => (
-//   <div className="navbar">
-  
-//     <div>
-//       <ul>
-//         <li>
-//           <Link to="/user">
-//             User Home
-//           </Link>
-//         </li>
-//         <li>
-//           <Link to="/info">
-//             Info Page
-//           </Link>
-//         </li>
-//         <li>
-//           <Link to="/map">
-//             Map Page
-//           </Link>
-//           <Link to="/addstreet">
-//            Add Street
-//           </Link>
-//         </li>
-//       </ul>
-//     </div>
-//   </div>
-// );

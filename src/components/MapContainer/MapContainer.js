@@ -8,7 +8,7 @@ import MediaCard from '../MediaCard/MediaCard'
 import './MapContainer.css'
 import StreetList from '../StreetList/StreetList'
 import AddStreet from '../AddStreet/AddStreet'
-// import {geolocated} from 'react-geolocated';
+
 
 const mapStateToProps = state => ({
     user: state.user,
@@ -83,13 +83,6 @@ class MapContainer extends Component {
         };
     };
 
-    // onInfoWindowClose = () => {
-    //     this.setState({
-    //         showingInfoWindow: false,
-    //         activeMarker: null
-    //     })
-    // }
-
     render() {
         if (!this.props.loaded) {
             return (
@@ -109,8 +102,6 @@ class MapContainer extends Component {
                     link_url={item.link_url}
                     icon={{
                         url: "http://maps.google.com/mapfiles/ms/micons/man.png",
-                        // anchor: (32,32),
-                        // scaledSize: [64,64]
                     }} />)
             });
             console.log(this.state.streetList)
@@ -122,9 +113,6 @@ class MapContainer extends Component {
                         <div className="main">
                             <div className="container">
                                 <div className="row">
-                                    {/* <div className="col-xs-5 title-container">
-                  Nothing
-                </div> */}
                                     <div className="col-xs-7 form-container">
                                         <Map
                                             onClick={this.onMapClicked}
@@ -135,7 +123,6 @@ class MapContainer extends Component {
                                             center={this.state.latLng}
                                             bounds={this.bounds}>
                                             {streets}
-
                                             <PlacesAutocomplete
                                                 value={this.state.address}
                                                 onChange={this.handleChange}
@@ -168,7 +155,6 @@ class MapContainer extends Component {
                                             </PlacesAutocomplete>
                                             <InfoWindow marker={this.state.activeMarker}
                                                 visible={this.state.showingMarkerInfoWindow}>
-                                                {/* // onClose={this.onInfoWindowClose}> */}
                                                 <MediaCard selectedPlace={this.state.selectedPlace} />
                                             </InfoWindow>
                                         </Map>
@@ -183,13 +169,9 @@ class MapContainer extends Component {
     }
 }
 
-
-
 const connectToGoogleMaps = GoogleApiWrapper({
     apiKey: ('AIzaSyDzaU7KsHW6rhxRrbkgLe34uyTYZ0FSpQU'),
     libraries: ['places']
 })(MapContainer)
-
-
 
 export default connect(mapStateToProps)(connectToGoogleMaps)

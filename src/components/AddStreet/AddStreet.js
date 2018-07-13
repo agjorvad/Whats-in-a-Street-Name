@@ -19,8 +19,7 @@ import swal from 'sweetalert'
 const styles = theme => ({
     container: {
         justifyContent: 'center',
-        
-    },
+    }
 });
 
 const mapStateToProps = state => ({
@@ -47,9 +46,9 @@ class AddStreet extends Component {
 }
 
 componentDidUpdate() {
-    if (!this.props.user.isLoading && this.props.user.userName === null) {
-        this.props.history.push('home');
-    }
+    // if (!this.props.user.isLoading && this.props.user.userName === null) {
+    //     this.props.history.push('home');
+    // }
 }
 
   handleClickOpen = () => {
@@ -106,9 +105,7 @@ handleClose = () => {
                 <Dialog
                     open={this.state.open}
                     onClose={this.handleClose}
-                    aria-labelledby="form-dialog-title"
-                >
-   
+                    aria-labelledby="form-dialog-title">
                     <DialogContent>
                         <TextField required="true" margin="dense" style={{width: '500px'}} autoFocus fullWidth className="input" onChange={this.handleChangeFor('street_name')} value={this.state.streetInfo.street_name} placeholder='Street Name' />
                         <br />

@@ -1,21 +1,24 @@
 import React from 'react';
 import { geolocated } from 'react-geolocated';
-
 import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { connect } from 'react-redux';
-import MapPage from '../MapPage/MapPage'
+import MapPage from '../MapPage/MapPage';
+
+const mapStateToProps = state => ({
+  user: state.user,
+});
 
 class Demo extends React.Component {
 
-  //   componentDidMount() {
-  //   this.props.dispatch({type: USER_ACTIONS.FETCH_USER});
-  // };
-
-  // componentDidUpdate() {
-  //   if (!this.props.user.isLoading && this.props.user.userName === null) {
-  //     this.props.history.push('login');
-  //   }
-  // };
+  componentDidMount() {
+    this.props.dispatch({type: USER_ACTIONS.FETCH_USER});
+  };
+  
+  componentDidUpdate() {
+    if (!this.props.user.isLoading && this.props.user.userName === null) {
+      this.props.history.push('home');
+    }
+  };
 
   render() {
 
@@ -39,9 +42,11 @@ class Demo extends React.Component {
   }
 }
 
-export default geolocated({
+const geoLocation = geolocated({
   positionOptions: {
     enableHighAccuracy: false,
   },
   userDecisionTimeout: 500000,
 })(Demo); 
+
+export default connect(mapStateToProps)(geoLocation);

@@ -13,7 +13,7 @@ Before you get started, make sure you have the following software installed on y
 
 ## Create database and table
 
-Create a new database called `prime_app` and create a `person` table:
+Create a new database and create a `person` table:
 
 ```SQL
 CREATE TABLE person (
@@ -23,13 +23,7 @@ CREATE TABLE person (
 );
 ```
 
-If you would like to name your database something else, you will need to change `prime_app` to the name of your new database name in `server/modules/pool.js`
-
-## Download (Don't Clone) This Repository
-
-* Don't Fork or Clone. Instead, click the `Clone or Download` button and select `Download Zip`.
-* Unzip the project and start with the code in that folder.
-* Create a new GitHub project and push this code to the new repository.
+Make sure whatever you name your database, you change name of the database in `server/modules/pool.js`
 
 ## Development Setup Instructions
 

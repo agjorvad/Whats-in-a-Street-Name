@@ -1,15 +1,3 @@
-// import React from 'react';
-
-// const Header = ({ title }) => (
-//   <div className="instructions">
-//     <div>
-//       <h1 className="lead">{ title }</h1>
-//     </div>
-//   </div>
-// );
-
-// export default Header;
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
@@ -45,9 +33,7 @@ function Header(props) {
           <MenuListComposition />
           <Typography variant="title" className={classes.flex} style={{color: 'white'}}>
           What's In a (Street) Name?
-          {/* <img src="images/yikekp7pT.jpeg" alt="skyline" height="150" className="logo" /> */}
          </Typography>
-        <LogoutButton />
         </Toolbar>
       </AppBar>
     </div>
