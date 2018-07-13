@@ -50,25 +50,10 @@ Then make sure `Launch Program` is selected from the dropdown, then click the gr
 
 ![VSCode Debug Bar](documentation/images/vscode-debug-bar.png)
 
-## Linting
-
-The Airbnb ESLint for react is a part of this project. If you would like to take advantage of this in VS Code, you can add the `ESLint` extension. Click the `Extensions` button (the button right below the `Debug`) and search for `ESLint`. Click `install` for the first result and then click `Reload`. Then it should be all set up!
-
-![VSCode Toolbar](documentation/images/vscode-toolbar.png)
-
-## Production Build
-
-This is the build Heroku will run, but during development, you will likely not need to use it.
-
-* Start postgres if not running already by using `brew services start postgresql`
-* Run `npm start`
-* Navigate to `localhost:5000`
-
 ## Lay of the Land
 
 * `src/` contains the React application
 * `public/` contains static assets for the client-side
-* `build/` after you build the project, contains the transpiled code from `src/` and `public/` that will be viewed on the production site
 * `server/` contains the Express App
 
 ## Deployment
