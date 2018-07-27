@@ -6,13 +6,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuListComposition from '../MenuList/MenuList';
 import LogoutButton from '../LogoutButton/LogoutButton';
-import './Header.css';
 
 const styles = {
   root: {
     flexGrow: 1,
     position: 'relative',
-    zIndex: 1000
+    zIndex: 1000,
+    background: 'red'
   },
   flex: {
     flex: 1,
@@ -28,7 +28,7 @@ function Header(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="cinnabar">
         <Toolbar>
           <MenuListComposition />
           <Typography variant="title" className={classes.flex} style={{color: 'white'}}>
