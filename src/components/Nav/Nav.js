@@ -11,6 +11,7 @@ import { USER_ACTIONS } from '../../redux/actions/userActions';
 import { connect } from 'react-redux';
 import { triggerLogout } from '../../redux/actions/loginActions';
 import LogoutButton from '../LogoutButton/LogoutButton';
+
 const styles = theme => ({
   root: {
     width: '100%',
